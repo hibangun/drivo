@@ -2,9 +2,9 @@ import { Link } from 'remix'
 
 export default function Header() {
   return (
-    <nav className="bg-header shadow-sm text-white">
-      <div className="flex-justtify-between items-center p-6 px-16">
-        <ul className="flex-items-center space-x-10 text-xl">
+    <nav className="shadow-sm">
+      <div className="flex justify-between items-center p-6">
+        <ul className="flex items-center space-x-10 text-xl">
           <Link to="/">
             <svg
               width="128"
@@ -92,6 +92,27 @@ export default function Header() {
             </svg>
           </Link>
         </ul>
+        <div className="flex items-center space-x-2">
+          <span>
+            Hello, <strong className="text-red-500">Shipper User</strong>
+          </span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+            <line x1="9" y1="9" x2="9.01" y2="9"></line>
+            <line x1="15" y1="9" x2="15.01" y2="9"></line>
+          </svg>
+        </div>
       </div>
     </nav>
   )
