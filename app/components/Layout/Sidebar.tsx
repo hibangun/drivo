@@ -35,7 +35,7 @@ export default function Sidebar() {
         isActive={pathname === '/'}
       />
       <MenuItem
-        href="/manage"
+        href="/drivers"
         icon={
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +43,7 @@ export default function Sidebar() {
             height="24"
             viewBox="0 0 24 24"
             fill="none"
-            stroke={pathname.startsWith('/manage') ? '#ef4444' : '#000'}
+            stroke={pathname.startsWith('/drivers') ? '#ef4444' : '#000'}
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -53,7 +53,7 @@ export default function Sidebar() {
           </svg>
         }
         title="Driver Management"
-        isActive={pathname.startsWith('/manage')}
+        isActive={pathname.startsWith('/drivers')}
       />
       <MenuItem
         href="/pickup"
