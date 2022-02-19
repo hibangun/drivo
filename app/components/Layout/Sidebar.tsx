@@ -12,7 +12,7 @@ export default function Sidebar() {
   const { pathname } = useLocation()
 
   return (
-    <nav className="py-6">
+    <nav className="py-6 w-3/12">
       <MenuItem
         href="/"
         icon={
@@ -91,7 +91,7 @@ function MenuItem({
   return (
     <Link to={href}>
       <div
-        className={`flex gap-3 px-6 py-2 my-2 border-l-4 ${
+        className={`flex items-center gap-3 px-6 py-2 my-2 border-l-4 ${
           isActive
             ? 'border-red-500 text-red-500 font-bold'
             : 'border-transparent'
