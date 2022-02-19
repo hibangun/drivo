@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
 import Header from './Header'
+import Sidebar from './Sidebar'
 
 type Props = {
   children?: ReactNode
@@ -11,7 +12,10 @@ const Layout = ({ children }: Props) => {
   return (
     <div className="flex flex-col h-screen">
       <Header />
-      {children}
+      <main className="flex">
+        <Sidebar />
+        <section className="bg-slate-50 flex-auto p-6">{children}</section>
+      </main>
     </div>
   )
 }
