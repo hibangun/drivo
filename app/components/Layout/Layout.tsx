@@ -14,7 +14,9 @@ const Layout = ({ children }: Props) => {
       <Header />
       <main className="flex">
         <Sidebar />
-        <section className="bg-slate-50 flex-auto p-6">{children}</section>
+        <section className="bg-slate-50 flex-auto p-6 min-h-screen">
+          {children}
+        </section>
       </main>
     </div>
   )
