@@ -84,11 +84,11 @@ export default function Drivers() {
         <input
           type="text"
           placeholder="Cari driver"
-          className="w-full md:w-auto py-2 px-4 border rounded"
+          className="w-full md:w-auto py-4 md:py-2 px-4 border rounded"
           value={search}
           onChange={(e) => handleSearch(e.target.value)}
         />
-        <div className="fixed bottom-0 right-5 md:relative md:right-0 flex items-center justify-end gap-4 mb-10 mt-3">
+        <div className="fixed bottom-0 right-0 bg-white md:bg-transparent p-5 md:p-0 w-full md:relative md:right-0 flex items-center justify-end gap-4 md:mb-10 md:mt-3">
           <button
             onClick={() => handlePage(false)}
             disabled={page <= 0}
@@ -106,7 +106,7 @@ export default function Drivers() {
         </div>
       </div>
       <div className="mt-5">
-        <div className="block md:flex md:flex-nowrap md:gap-4 md:overflow-x-scroll">
+        <div className="block mb-16 md:flex md:flex-nowrap md:gap-4 md:overflow-x-scroll">
           {drivers.map((item) => (
             <DriverList item={item} />
           ))}
