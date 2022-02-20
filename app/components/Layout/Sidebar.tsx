@@ -97,7 +97,7 @@ function MenuItem({
   isActive = false
 }: Menu) {
   return (
-    <Link to={href}>
+    <Link to={href} reloadDocument={true}>
       <div
         className={`flex items-center gap-3 px-6 py-2 my-2 border-l-4 ${
           isActive
