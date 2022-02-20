@@ -22,7 +22,7 @@ type Driver = {
 
 export const DriverList: FC<DriverProps> = ({ item }) => {
   return (
-    <div className="w-full md:w-64 bg-white drop-shadow-md rounded mb-10">
+    <div className="w-full md:basis-1/5 bg-white drop-shadow-md rounded mb-10">
       <p className="bg-slate-100 p-4 truncate text-ellipsis overflow-hidden">
         Driver ID: <span className="text-red-500">{item.id.value || '-'}</span>
       </p>

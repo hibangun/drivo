@@ -106,7 +106,7 @@ export default function Drivers() {
         </div>
       </div>
       <div className="mt-5">
-        <div className="block mb-16 md:flex md:flex-nowrap md:gap-4 md:overflow-x-scroll">
+        <div className="block mb-16 md:flex md:flex-nowrap md:gap-4 md:overflow-x-scroll md:flex-row">
           {drivers.map((item) => (
             <DriverList item={item} />
           ))}
