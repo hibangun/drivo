@@ -83,7 +83,7 @@ export default function Sidebar({ isMobileMenuOpen }: SidebarProps) {
             <line x1="3" y1="10" x2="21" y2="10"></line>
           </svg>
         }
-        title="Pickup"
+        title="Pickup (Contoh 404)"
         isActive={pathname.startsWith('/pickup')}
       />
     </nav>
