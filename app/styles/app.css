@@ -480,6 +480,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 0;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .sticky {
   position: -webkit-sticky;
   position: sticky;
@@ -497,8 +501,32 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: 1.25rem;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.right-10 {
+  right: 2.5rem;
+}
+
+.right-5 {
+  right: 1.25rem;
+}
+
 .z-10 {
   z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
 }
 
 .my-4 {
@@ -1004,6 +1032,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 640px) {
+  .sm\:flex {
+    display: flex;
+  }
+
   .sm\:hidden {
     display: none;
   }
@@ -1041,6 +1073,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 @media (min-width: 768px) {
   .md\:relative {
     position: relative;
+  }
+
+  .md\:right-0 {
+    right: 0px;
   }
 
   .md\:mt-0 {
@@ -1083,6 +1119,14 @@ Ensure the default browser behavior of the `hidden` attribute.
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .md\:flex-wrap {
+    flex-wrap: wrap;
+  }
+
+  .md\:flex-nowrap {
+    flex-wrap: nowrap;
+  }
+
   .md\:items-center {
     align-items: center;
   }
@@ -1093,6 +1137,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:gap-6 {
     gap: 1.5rem;
+  }
+
+  .md\:gap-4 {
+    gap: 1rem;
+  }
+
+  .md\:overflow-visible {
+    overflow: visible;
+  }
+
+  .md\:overflow-x-scroll {
+    overflow-x: scroll;
   }
 }
 

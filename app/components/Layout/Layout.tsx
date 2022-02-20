@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { ReactNode, useState } from 'react'
 import Header from './Header'
 import Sidebar from './Sidebar'
 
@@ -9,11 +9,17 @@ type Props = {
 }
 
 const Layout = ({ children }: Props) => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
+
   return (
     <div className="flex flex-col h-screen">
-      <Header />
+      <Header toggleMobileMenu={toggleMobileMenu} />
       <main className="flex flex-row">
-        <Sidebar />
+        <Sidebar isMobileMenuOpen={isMobileMenuOpen} />
         <section className="bg-slate-50 w-full md:w-9/12 p-6 min-h-screen">
           {children}
         </section>

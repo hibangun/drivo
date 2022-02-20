@@ -88,25 +88,25 @@ export default function Drivers() {
           value={search}
           onChange={(e) => handleSearch(e.target.value)}
         />
-        <div className="flex items-center justify-end gap-4 mb-10 mt-3">
+        <div className="fixed bottom-0 right-5 md:relative md:right-0 flex items-center justify-end gap-4 mb-10 mt-3">
           <button
             onClick={() => handlePage(false)}
             disabled={page <= 0}
-            className="disabled:opacity-30 text-2xl w-10 h-10 rounded border-2 border-black"
+            className="disabled:opacity-30 text-2xl w-10 h-10 rounded border-2 border-black bg-white"
           >
             ‹
           </button>
           <button
             onClick={() => handlePage(true)}
             disabled={page >= totalPage || totalPage === 1}
-            className="disabled:opacity-30 text-2xl w-10 h-10 rounded border-2 border-black"
+            className="disabled:opacity-30 text-2xl w-10 h-10 rounded border-2 border-black bg-white"
           >
             ›
           </button>
         </div>
       </div>
       <div className="mt-5">
-        <div className="flex sm:flex-wrap sm:overflow-visible lg:flex-nowrap gap-4 lg:overflow-x-scroll">
+        <div className="block md:flex md:flex-nowrap md:gap-4 md:overflow-x-scroll">
           {drivers.map((item) => (
             <DriverList item={item} />
           ))}

@@ -1,18 +1,20 @@
 import { Link } from 'remix'
 
-export default function Header() {
+type HeaderProps = {
+  toggleMobileMenu: () => void
+}
+
+export default function Header({ toggleMobileMenu }: HeaderProps) {
   return (
     <nav className="shadow-sm">
       <div className="flex justify-between items-center p-6">
         <button
           type="button"
-          className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-          aria-controls="mobile-menu-2"
-          aria-expanded="false"
+          className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200"
+          onClick={toggleMobileMenu}
         >
           <svg
             className="w-6 h-6"
-            fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -24,7 +26,6 @@ export default function Header() {
           </svg>
           <svg
             className="hidden w-6 h-6"
-            fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -124,24 +125,27 @@ export default function Header() {
           </Link>
         </ul>
         <div className="flex items-center space-x-2">
-          <span>
+          <span className="hidden md:inline-block">
             Hello, <strong className="text-red-500">Shipper User</strong>
           </span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            viewBox="0 0 64 64"
+            className="rounded-full h-10 w-10"
           >
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-            <line x1="9" y1="9" x2="9.01" y2="9"></line>
-            <line x1="15" y1="9" x2="15.01" y2="9"></line>
+            <path fill="#c1c1c1" d="M0 0h64v64H0z" />
+            <path
+              fill="#FFF"
+              d="M46.6 41.2c-3.3-.9-5.7-2.2-8-3.1 0 .5-.1.9-.5 1.3-1.4 1.5-3.6 2.4-6.1 2.4-2.5 0-4.8-.9-6.1-2.4-.5-.5-.6-.9-.5-1.4-2.3 1-4.7 2.2-8 3.1 0 0-3.1 1.8-3.4 8.8h36c-.2-7.1-3.4-8.7-3.4-8.7z"
+            />
+            <path
+              fill="#FFF"
+              d="M32 34.3c-1.6 0-3.2-.9-4.5-2.2-.1 5.4-1.7 5.9-.9 6.7 2.5 2.7 8.1 2.9 10.8 0 .8-.8-.6-1.3-.9-6.8-1.3 1.3-2.9 2.3-4.5 2.3z"
+            />
+            <path
+              fill="#FFF"
+              d="M32 34.3c-3.8 0-7.7-5.2-7.7-8.8v-5c0-3.6 3.2-6.5 6.8-6.5h1.8c3.8 0 6.8 2.9 6.8 6.5v5c-.1 3.6-3.9 8.8-7.7 8.8z"
+            />
           </svg>
         </div>
       </div>

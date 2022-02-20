@@ -8,11 +8,19 @@ type Menu = {
   isActive?: boolean
 }
 
-export default function Sidebar() {
+type SidebarProps = {
+  isMobileMenuOpen: boolean
+}
+
+export default function Sidebar({ isMobileMenuOpen }: SidebarProps) {
   const { pathname } = useLocation()
 
   return (
-    <nav className="py-6 w-3/12 hidden md:block">
+    <nav
+      className={`py-6 bg-white h-screen z-20 ${
+        isMobileMenuOpen ? 'block fixed w-full' : 'hidden w-3/12'
+      } md:block`}
+    >
       <MenuItem
         href="/"
         icon={
