@@ -22,33 +22,37 @@ type Driver = {
 
 export const DriverList: FC<DriverProps> = ({ item }) => {
   return (
-    <div className="w-64 bg-white drop-shadow-md rounded mb-10">
+    <div className="w-full md:w-64 bg-white drop-shadow-md rounded mb-10">
       <p className="bg-slate-100 p-4 truncate text-ellipsis overflow-hidden">
         Driver ID: <span className="text-red-500">{item.id.value || '-'}</span>
       </p>
-      <div className="p-4 mt-5">
+      <div className="p-4 mt-5 flex items-center gap-10 md:block">
         <img
           src={item.picture.medium}
           alt=""
-          className="w-28 h-28 rounded-full inline-block mb-4"
+          className="flex w-28 h-28 rounded-full inline-block"
         />
-        <div className="my-4">
-          <p className="text-xs text-slate-500">Nama Driver</p>
-          <p>
-            {item.name.first} {item.name.last}
-          </p>
-        </div>
-        <div className="my-4">
-          <p className="text-xs text-slate-500">Telepon</p>
-          <p>{item.phone}</p>
-        </div>
-        <div className="my-4">
-          <p className="text-xs text-slate-500">Email</p>
-          <p className="truncate text-ellipsis overflow-hidden">{item.email}</p>
-        </div>
-        <div className="my-4">
-          <p className="text-xs text-slate-500">Tanggal lahir</p>
-          <p>{dayjs(item.dob.date).format('DD MMM YYYY')}</p>
+        <div className="description">
+          <div className="my-4 block">
+            <p className="text-xs text-slate-500">Nama Driver</p>
+            <p>
+              {item.name.first} {item.name.last}
+            </p>
+          </div>
+          <div className="my-4">
+            <p className="text-xs text-slate-500">Telepon</p>
+            <p>{item.phone}</p>
+          </div>
+          <div className="hidden md:block my-4">
+            <p className="text-xs text-slate-500">Email</p>
+            <p className="truncate text-ellipsis overflow-hidden">
+              {item.email}
+            </p>
+          </div>
+          <div className="hidden md:block my-4">
+            <p className="text-xs text-slate-500">Tanggal lahir</p>
+            <p>{dayjs(item.dob.date).format('DD MMM YYYY')}</p>
+          </div>
         </div>
       </div>
     </div>

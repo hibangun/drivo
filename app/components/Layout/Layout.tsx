@@ -14,7 +14,7 @@ const Layout = ({ children }: Props) => {
       <Header />
       <main className="flex flex-row">
         <Sidebar />
-        <section className="bg-slate-50 w-9/12 p-6 min-h-screen">
+        <section className="bg-slate-50 w-full md:w-9/12 p-6 min-h-screen">
           {children}
         </section>
       </main>

@@ -67,24 +67,24 @@ export default function Drivers() {
 
   return (
     <>
-      <div className="flex justify-between items-center bg-white p-6 rounded">
+      <div className="block md:flex md:justify-between md:items-center bg-white p-6 rounded">
         <div>
           <h1 className="text-2xl text-red-500 font-bold">DRIVER MANAGEMENT</h1>
           <p>Data driver yang bekerja dengan Anda</p>
         </div>
         <div className="flex items-center gap-2">
           <Link to="/drivers/new">
-            <span className="bg-red-500 py-3 px-4 rounded text-white">
+            <span className="inline-block mt-5 md:mt-0 bg-red-500 py-3 px-4 rounded text-white">
               + Tambah driver
             </span>
           </Link>
         </div>
       </div>
-      <div className="mt-10 text-right">
+      <div className="mt-10 text-right sticky md:relative top-5 z-10">
         <input
           type="text"
           placeholder="Cari driver"
-          className="py-2 px-4 border rounded"
+          className="w-full md:w-auto py-2 px-4 border rounded"
           value={search}
           onChange={(e) => handleSearch(e.target.value)}
         />
@@ -103,7 +103,6 @@ export default function Drivers() {
           >
             ›
           </button>
-          {totalPage} ({page})
         </div>
       </div>
       <div className="mt-5">
@@ -111,6 +110,10 @@ export default function Drivers() {
           {drivers.map((item) => (
             <DriverList item={item} />
           ))}
+
+          {!drivers.length && (
+            <p className="text-center">Driver tidak ditemukan</p>
+          )}
         </div>
       </div>
     </>

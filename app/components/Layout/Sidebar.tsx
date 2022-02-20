@@ -12,7 +12,7 @@ export default function Sidebar() {
   const { pathname } = useLocation()
 
   return (
-    <nav className="py-6 w-3/12">
+    <nav className="py-6 w-3/12 hidden md:block">
       <MenuItem
         href="/"
         icon={
