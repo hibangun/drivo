@@ -19,11 +19,11 @@ export const CatchBoundary = function CatchBoundary() {
   switch (caught.status) {
     case 404:
       return (
-        <Document title="Page not found">
+        <Document title="Halaman tidak ditemukan">
           <Layout404
             backlinkTo="/"
-            backlinkText="Back to home"
-            title="Page not found"
+            backlinkText="Kembali ke Beranda"
+            title="Halaman tidak ditemukan"
           />
         </Document>
       )
